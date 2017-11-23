@@ -1,0 +1,24 @@
+<% include partials/header %>
+
+<div class="container">
+   
+   <div class="page-header" >
+      <div style="text-align: center">
+         <h1>My Grocery List</h1>
+         <p><small>List of items to be purchased!!!</small></p>
+         <p>
+            <a class="btn btn-primary btn-large" href="/new">Add new item</a>   
+         </p>
+      </div>
+   </div>
+</div>
+   
+      <div class = "container">
+         <div style="width: 30%; margin: 25px auto;"> 
+               <ul class ="list-group">
+                  <% items.forEach(function(item){ %>
+                      <li class="list-group-item list-group-item-success"><a href="/<%= item._id %>"><%= item.title %></a></li>
+                 <% }); %>
+               </ul>
+         </div>      
+      </div>
