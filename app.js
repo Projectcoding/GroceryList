@@ -12,8 +12,8 @@ app.set("view engine", "ejs");
 var grocerySchema = new mongoose.Schema({
  
   title: String,  
-  description: String
-//  purchased: Boolean //To be used in user story 6
+  description: String,
+  purchased: Boolean      //To be used in user story 6
 });
 
 var Grocery = mongoose.model("Grocery", grocerySchema);
